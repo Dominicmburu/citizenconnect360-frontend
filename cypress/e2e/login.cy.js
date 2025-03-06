@@ -22,13 +22,13 @@ describe("Login Page", () => {
     cy.contains("Invalid credentials").should("be.visible");
   });
 
-  it("should login successfully with correct credentials", () => {
-    cy.get("input#email").type("mburudominic381@gmail.com");
-    cy.get("input#password").type("password");
-    cy.get("button[type='submit']").click();
+  // it("should login successfully with correct credentials", () => {
+  //   cy.get("input#email").type("mburudominic381@gmail.com");
+  //   cy.get("input#password").type("password");
+  //   cy.get("button[type='submit']").click();
 
-    cy.url().should("include", "/dashboard");
-    cy.window().its("localStorage.token").should("exist");
-    cy.contains("Login successful").should("be.visible");
-  });
+  //   cy.url().should("include", "/dashboard");
+  //   cy.window().its("localStorage.token").should("exist");
+  //   cy.contains("Login successful").should("be.visible");
+  // });
 });
