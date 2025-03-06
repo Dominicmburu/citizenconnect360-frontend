@@ -10,39 +10,44 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
   const validateInputs = () => {
-    const errors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!username) {
-      errors.username = "Username is required";
+      toast.error("Username is required");
+      return false;
     } else if (username.length < 3) {
-      errors.username = "Username must be at least 3 characters";
+      toast.error("Username must be at least 3 characters");
+      return false;
     }
 
     if (!email) {
-      errors.email = "Email is required";
+      toast.error("Email is required");
+      return false;
     } else if (!emailRegex.test(email)) {
-      errors.email = "Invalid email format";
+      toast.error("Invalid email format");
+      return false;
     }
 
     if (!password) {
-      errors.password = "Password is required";
+      toast.error("Password is required");
+      return false;
     } else if (password.length < 6) {
-      errors.password = "Password must be at least 6 characters";
+      toast.error("Password must be at least 6 characters");
+      return false;
     }
 
     if (!confirmPassword) {
-      errors.confirmPassword = "Confirm Password is required";
+      toast.error("Confirm Password is required");
+      return false;
     } else if (password !== confirmPassword) {
-      errors.confirmPassword = "Passwords do not match";
+      toast.error("Passwords do not match");
+      return false;
     }
 
-    setErrors(errors);
-    return Object.keys(errors).length === 0;
+    return true;
   };
 
   const handleSubmit = async (e) => {
@@ -53,7 +58,7 @@ export default function Signup() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post("http://localhost:5000/api/auth/register", {
         username,
         email,
         password,

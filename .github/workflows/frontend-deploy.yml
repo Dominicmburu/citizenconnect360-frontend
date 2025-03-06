@@ -6,8 +6,32 @@ on:
       - main  
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start the Frontend Server
+        run: npm run dev &  # Runs in the background
+
+      - name: Wait for Server to Start
+        run: npx wait-on http://localhost:5173
+
+      - name: Run Cypress Tests
+        run: npm run test:e2e  # Ensure this script exists in package.json
+
   build:
     runs-on: ubuntu-latest
+    needs: test  # Only run if tests pass
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
@@ -31,7 +55,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: build  # Only run if build succeeds
     steps:
       - name: Download Build Artifacts
         uses: actions/download-artifact@v4
