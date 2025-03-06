@@ -1,0 +1,13 @@
+#login{
+    background-color: #13213C;
+    color: white;
+    border-bottom: #FCA311 2px solid;
+    border-left: 2px solid #FCA311;
+    text-align: left;
+}
+
+#login button{
+    background-color: #FCA311;
+    font-weight: bold;
+    margin-top: 30px;
+}

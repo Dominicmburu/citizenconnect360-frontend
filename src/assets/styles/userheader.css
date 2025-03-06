@@ -1,0 +1,55 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a2641;
+  color: #ff9900;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left h1{
+    margin: 0;
+    padding: 0;
+}
+
+.header-left button{
+    align-items: center;
+    display: flex;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: #ff9900;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+}
+
+.user-icons,
+.logout,
+.notification-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #3a7bd5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+

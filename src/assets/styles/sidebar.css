@@ -1,0 +1,27 @@
+.sidebar {
+  width: 200px;
+  background-color: #192238;
+  padding: 2rem 0;
+  height: 100vh;
+  position: fixed;
+  margin-top: 70px;
+  z-index: 2000px;
+}
+
+.nav-item {
+  display: block;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #263150;
+}
+
+.nav-item.active {
+  background-color: #263150;
+  border-left: 4px solid #ff9900;
+  color: #ff9900;
+}

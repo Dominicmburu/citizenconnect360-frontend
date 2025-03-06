@@ -1,0 +1,27 @@
+header {
+    background-color: #13213C;
+}
+
+header .logo {
+    color: #FCA311;
+    font-weight: bolder;
+}
+
+header button {
+    border: 1px solid #FCA311;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 20px;
+}
+
+@media screen and (max-width: 600px) {
+    header .logo {
+        font-size: 1.2em;
+    }
+
+    header button {
+        padding: 6px 15px;
+        font-size: 0.9em;
+    }
+}

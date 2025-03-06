@@ -1,0 +1,14 @@
+.hero{
+    padding: 100px 0;
+    max-width: 90%;
+    margin: auto;
+}
+
+.hero span{
+    color: #FCA311;
+}
+
+.hero p{
+    letter-spacing: 2px;
+    color: #CCCCCC;
+}

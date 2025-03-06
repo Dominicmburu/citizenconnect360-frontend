@@ -1,0 +1,158 @@
+.page-container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.page-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 200px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.page-title {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.documents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a2641;
+  padding: 1.5rem;
+  border-radius: 0;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.document-title {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.document-description {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.document-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.chat-button {
+  background-color: #ff9900;
+  color: #000000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.download-button {
+  background: transparent;
+  color: #3498db;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  /* background-color: #b10000; */
+  margin-top: 50px;
+}
+
+.chat-header h2{
+  margin: 0;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.chat-title {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  scrollbar-width: none;
+  height: 500px;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 0px; 
+}
+
+.chat-message {
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.bot-message {
+  background-color: #2c3e50;
+  color: #ffffff;
+  align-self: flex-start;
+}
+
+.user-message {
+  background-color: #ff9900;
+  color: #000000;
+  align-self: flex-end;
+}
+
+.chat-input-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.send-button {
+  background-color: #ff9900;
+  color: #000000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,0 +1,54 @@
+.feature{
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto 50px auto;
+    background-color: #13213C;
+    border-radius: 12px;
+    gap: 20px;
+}
+
+
+.feature .title{
+    color: #FCA311;
+}
+
+.feature .desc{
+    color: #bebebe;
+}
+
+#feature-list{
+    width: 100%;
+    max-width: 90%;
+    margin: 40px auto 70px auto;
+}
+
+#feature-card{
+    background-color: #13213C;
+    border-bottom: #FCA311 2px solid;
+    color: antiquewhite;
+    border-left: 2px solid #FCA311;
+}
+
+@media screen and (max-width: 600px) {
+    .feature {
+        flex-direction: column;
+        max-width: 100%;
+        gap: 10px;
+        background-color: transparent;
+    }
+
+    .feature .s-f{
+        background-color: #13213C;
+        border-radius: 12px;
+        padding: 12px;
+    }
+
+    .feature .title, .feature .desc {
+        text-align: center;
+    }
+
+    #feature-list{
+        max-width: 100%;
+        width: 100%;
+    }
+}

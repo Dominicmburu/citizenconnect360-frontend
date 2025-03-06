@@ -1,0 +1,61 @@
+.report-incident-container {
+  background-color: #1a2641;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid #ff9900;
+}
+
+.report-incident-container h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.incident-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #999;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ff9900;
+  background-color: #0f1726;
+  color: white;
+  box-sizing: border-box;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.file-input {
+  padding: 8px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff9900;
+  color: #1a2641;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #e68a00;
+}
