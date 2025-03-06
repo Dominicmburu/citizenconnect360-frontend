@@ -48,6 +48,3 @@ jobs:
 
       - name: Deploy to S3
         run: aws s3 sync ./dist s3://${{ secrets.BUCKET_NAME }} --delete
-
-      - name: Output Deployment URL
-        run: echo "Frontend deployed to: https://${{ secrets.BUCKET_NAME }}.s3.amazonaws.com/index.html"
