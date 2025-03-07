@@ -65,7 +65,7 @@ export default function Login() {
           </form>
           <p className="text-left mt-3">
             Don't have an account?{" "}
-            <a href="/signup" className="text-primary">
+            <a href="#" onClick={() => navigate("/signup")} className="text-primary">
               Sign up
             </a>
           </p>

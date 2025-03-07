@@ -135,8 +135,8 @@ export default function Signup() {
           </form>
           <p className="text-center mt-3">
             Already have an account?{" "}
-            <a href="/login" className="text-primary">
-              Login
+            <a href="#" onClick={() => navigate("/login")} className="text-primary">
+            Login
             </a>
           </p>
         </div>
